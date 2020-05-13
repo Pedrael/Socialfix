@@ -1,0 +1,51 @@
+@import "_colors.scss";
+@import "_fonts.scss";
+
+$mont: 'Montserrat', sans-serif;
+* {
+	z-index: 1;
+}
+html, body {
+	    font-family: $mont;
+			overflow-x: hidden;
+			width: 100vw;
+      background: black;
+
+			a {
+				text-decoration: none;
+        cursor: pointer;
+			}
+
+			ul {
+				margin: 0;
+			}
+
+			li {
+				list-style: none;
+			}
+      h2, h3, h4 {
+        font-weight: 500;
+      }
+      p, h2, h3, h4, li, a  {
+        color: white;
+      }
+      p, li, a, input, textarea {
+        @include SetFontLineSize(0.1, 0.1, 0.8, 14, 10);
+      }
+			textarea {
+				font-family: $mont;
+				resize: none;
+			}
+			h2 {
+        @include SetFontLineSize(0.35, 0.35, 0.3, 158, 0);
+        color: rgba(0, 0, 0, 0);
+        text-shadow: 0 0 0 white;
+        text-transform: uppercase;
+      }
+      h3 {
+        @include SetFontLineSize(0.2, 0.2, 0.6, 22, 8);
+      }
+}
+
+
+@import "includes/teaser.scss";

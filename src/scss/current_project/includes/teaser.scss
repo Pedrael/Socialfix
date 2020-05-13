@@ -1,0 +1,66 @@
+.teaser {
+  .video-container {
+    @include SetWidth-responsive(1200);
+    min-height: RelativeUnits(950, 1, desktop-middle, horizontal);
+    padding-top: RelativeUnits(255, 1, desktop-middle, horizontal);
+    video, img {
+      width: 100%;
+      height: auto;
+      //background: red;
+    }
+  }
+
+  .text-container {
+    @include SetWidth-responsive(700);
+    position: relative;
+    padding-top: RelativeUnits(455, 1, desktop-middle, horizontal);
+    .line {
+      min-width: 100%;
+      p {
+        @include SetFontLineSize(0.1, 0.1, 0.8, 12, 10);
+        margin: 0 5px;
+        color: $d_gray;
+        text-transform: uppercase;
+        display: block;
+        white-space: nowrap;
+      }
+    }
+    .vertical {
+      transform: rotate(270deg);
+      transform-origin: 0 100%;
+      position: absolute;
+      top: calc(#{RelativeUnits(455, 1, desktop-middle, horizontal)} - 15px);
+      left: RelativeUnits(330, 1, desktop-middle, horizontal);
+    }
+    .horizontal {
+      align-self: flex-start;
+      margin-left: RelativeUnits(50, 0.5, desktop-middle, horizontal);
+    }
+    .logo-text {
+      @include SetWidth-responsive(340);
+      margin-right: RelativeUnits(50, 0.5, desktop-middle, horizontal);
+      margin-top: RelativeUnits(10, 0.5, desktop-middle, horizontal);
+      margin-bottom: RelativeUnits(30, 0.5, desktop-middle, horizontal);
+
+    }
+    .shitty-text {
+      .line:nth-child(2n) {
+        margin-left: RelativeUnits(-20, 0.5, desktop-middle, horizontal);
+      }
+    }
+  }
+
+  @include _phone-big {
+    flex-direction: column;
+    .text-container, .video-container {
+      width: 100vw;
+      min-width: auto;
+    }
+    .text-container {
+      .horizontal, .vertical {
+        display: none;
+      }
+    }
+  }
+
+}
