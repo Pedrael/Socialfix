@@ -1,8 +1,8 @@
 .teaser {
   .video-container {
     @include SetWidth-responsive(1200);
-    min-height: RelativeUnits(950, 1, desktop-middle, horizontal);
-    padding-top: RelativeUnits(255, 1, desktop-middle, horizontal);
+    min-height: RelativeUnits(700, 1, desktop-middle, horizontal);
+    margin-top: RelativeUnits(255, 1, desktop-middle, horizontal);
     video, img {
       width: 100%;
       height: auto;
@@ -14,6 +14,7 @@
     @include SetWidth-responsive(700);
     position: relative;
     padding-top: RelativeUnits(455, 1, desktop-middle, horizontal);
+
     .line {
       min-width: 100%;
       p {
@@ -43,10 +44,15 @@
       margin-bottom: RelativeUnits(30, 0.5, desktop-middle, horizontal);
 
     }
-    .shitty-text {
+    .potato-text {
       .line:nth-child(2n) {
         margin-left: RelativeUnits(-20, 0.5, desktop-middle, horizontal);
       }
+    }
+    .potato-text-mobile {
+      position: absolute;
+      width: 100%;
+      display: none;
     }
   }
 
@@ -57,9 +63,26 @@
       min-width: auto;
     }
     .text-container {
-      .horizontal, .vertical {
+      align-items: center;
+      .horizontal, .vertical, .potato-text {
         display: none;
       }
+      .logo-text {
+        width: 191px;
+        margin-top: 30px;
+        margin-left: 30px;
+        margin-bottom: 30px;
+      }
+      .potato-text-mobile {
+        display: block;
+        z-index: 0;
+      }
+    }
+    .video-container {
+      overflow: hidden;
+      border-radius: 20px;
+      max-height: calc(100vw * 9 / 16);
+      margin-top: 0;
     }
   }
 
