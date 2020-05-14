@@ -38,9 +38,12 @@ html {
 			}
 			h2 {
         @include SetFontLineSize(0.35, 0.35, 0.3, 158, 0);
-        color: rgba(0, 0, 0, 0);
-        text-shadow: 0 0 0 white;
+        //text-shadow: 0 10px 0 white;
         text-transform: uppercase;
+			  background: -webkit-linear-gradient(-86deg, #EEF85B 5%, #7AEC8D 53%, #09E5C3 91%);
+			  -webkit-background-clip: text;
+			  -webkit-text-stroke: 4px transparent;
+			  color: black;
       }
       h3 {
         @include SetFontLineSize(0.2, 0.2, 0.6, 22, 8);
