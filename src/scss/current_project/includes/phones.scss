@@ -1,0 +1,33 @@
+#phones {
+  .wrap {
+    @include SetWidth-responsive(1240);
+  }
+  .text-wrap {
+    @include SetWidth-responsive(650);
+    margin-top: RelativeUnits(550, 1, desktop-middle, horizontal);
+    margin-left: RelativeUnits(-250, 1, desktop-middle, horizontal);
+  }
+  h4 {
+    background: -webkit-linear-gradient(-90deg, #ffffff 0%, #373737 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  @include _tablet-middle {
+    margin-bottom: 100px;
+    .wrap, .text-wrap {
+      width: 100vw;
+      img {
+        min-width: 580px;
+        margin-left: -20px;
+      }
+    }
+    .phones {
+      flex-direction: column;
+    }
+    .text-wrap {
+      margin: 0;
+      padding: 0 RelativeUnits(36, 1, tablet-middle, horizontal);
+      margin-top: -100px;
+    }
+  }
+}

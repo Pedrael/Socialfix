@@ -13,12 +13,12 @@
   .text-container {
     @include SetWidth-responsive(700);
     position: relative;
-    padding-top: RelativeUnits(455, 1, desktop-middle, horizontal);
+    padding-top: RelativeUnits(405, 1, desktop-middle, horizontal);
 
     .line {
       min-width: 100%;
       p {
-        @include SetFontLineSize(0.1, 0.1, 0.8, 12, 10);
+        @include SetFontLineSize(0.3, 0.3, 0.4, 12, 10);
         margin: 0 5px;
         color: $d_gray;
         text-transform: uppercase;
@@ -30,7 +30,7 @@
       transform: rotate(270deg);
       transform-origin: 0 100%;
       position: absolute;
-      top: calc(#{RelativeUnits(455, 1, desktop-middle, horizontal)} - 15px);
+      top: calc(#{RelativeUnits(405, 1, desktop-middle, horizontal)} - 15px);
       left: RelativeUnits(330, 1, desktop-middle, horizontal);
     }
     .horizontal {
@@ -85,5 +85,116 @@
       margin-top: 0;
     }
   }
+}
 
+.subteaser {
+  .container {
+    @include SetWidth-responsive(1450);
+
+    h2 {
+      background: -webkit-linear-gradient(-86deg, #8FDEB8 5%, #35A1C2 91%);
+      -webkit-background-clip: text;
+      -webkit-text-stroke: RelativeUnits(6, 0.5, desktop-middle, horizontal) transparent;
+      color: black;
+      margin-top: RelativeUnits(-60, 0.9, desktop-middle, horizontal);
+    }
+    #teaser-slider {
+      display: none;
+      margin-bottom: 50px;
+    }
+    .services {
+      width: 100%;
+
+      .service {
+        width: 45%;
+        min-height: RelativeUnits(140, 0.5, desktop-middle, horizontal);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: RelativeUnits(60, 0.5, desktop-middle, horizontal);
+        margin-bottom: RelativeUnits(160, 1, desktop-middle, horizontal);
+        h3 {
+          @include SetFontLineSize(0.2, 0.2, 0.6, 36, 1);
+        }
+        p {
+          color: $gray;
+        }
+      }
+    }
+
+    .tags {
+      width: 100%;
+      flex-wrap: wrap;
+      .tag {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: $almost_black;
+        padding: RelativeUnits(30, 0.5, desktop-middle, horizontal) RelativeUnits(40, 0.5, desktop-middle, horizontal);
+        margin: RelativeUnits(20, 0.5, desktop-middle, horizontal);
+        border-radius: RelativeUnits(40, 0.5, desktop-middle, horizontal);
+        flex-grow: 1;
+        h4 {
+          font-weight: 600;
+          margin-bottom: 5px;
+          span {
+            @include SetFontLineSize(0.2, 0.2, 0.6, 93, 1);
+            font-weight: 300;
+          }
+        }
+        p {
+          @include SetFontLineSize(0.1, 0.1, 0.8, 18, 10);
+          font-weight: 600;
+          text-align: center;
+        }
+      }
+      h4#color1, span#color1 {
+        background: -webkit-linear-gradient(-40deg, #00B4CD 1%, #4FEF7C 99%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      h4#color2, span#color2 {
+        background: -webkit-linear-gradient(-40deg, #71F6FF 1%, #4D94FF 99%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      h4#color3, span#color3 {
+        background: -webkit-linear-gradient(-40deg, #FCFF70 1%, #FFA9F1 99%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      h4#color4, span#color4 {
+        background: -webkit-linear-gradient(-40deg, #A8CCFD 1%, #FFD5C8 99%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+  @include _phone-big {
+    .container {
+      width: 100vw;
+      overflow: hidden;
+      h2 {
+        margin-top: RelativeUnits(40, 0.0, desktop-middle, horizontal);
+        margin-left: 18px;
+      }
+      .services, .tags {
+        flex-wrap: nowrap;
+        width: 200%;
+        margin-left: 18px;
+      }
+      .tags {
+        .tag {
+          min-width: 190px;
+          h4 {
+            font-size: 18px;
+            span { font-size: 36px; }
+          }
+          p { font-size: 14px; }
+        }
+      }
+      #teaser-slider { display: flex; }
+    }
+  }
 }

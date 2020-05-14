@@ -1,0 +1,88 @@
+#social1 {
+  background: url(../img/spookyguy.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: contain;
+  min-height: RelativeUnits(1800, 1, desktop-middle, horizontal);
+}
+#social2 {
+  background: url(../img/space.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+  min-height: RelativeUnits(1400, 1, desktop-middle, horizontal);
+  justify-content: center;
+  @include _phone-big {
+    background-position: center;
+    .container {
+      flex-direction: column;
+    }
+  }
+}
+#social3 {
+  background: url(../img/green.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+  min-height: RelativeUnits(1280, 1, desktop-middle, horizontal);
+  justify-content: center;
+}
+.social {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    background: -webkit-linear-gradient(-66deg, #DF3C31 1%, #864DFF 99%);//overrides in other files
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 4px transparent;
+    color: black;
+    align-self: flex-start;
+    margin-bottom: RelativeUnits(350, 0.9, desktop-middle, horizontal);
+  }
+  .spookytext {
+    position: absolute;
+    -webkit-text-stroke: 4px rgba(200, 200, 200, 0.03);
+    background: transparent;
+    color: transparent;
+    z-index: 0;
+    right: 0;
+    top: RelativeUnits(200, 0.9, desktop-middle, horizontal);
+    @include SetFontLineSize(0.5, 0.5, 0.0, 320, 0);
+  }
+  .container, .title {
+    @include SetWidth-responsive(1330);
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    .text {
+      @include SetWidth-responsive(650);
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      h3 {
+        margin-bottom: RelativeUnits(22, 0.5, desktop-middle, horizontal);
+      }
+    }
+    .image {
+      @include SetWidth-responsive(560);
+    }
+  }
+  @include _phone-big {
+    padding: 20px 0;
+    .spookytext { display: none; }
+    .title {
+      width: 90vw;
+    }
+    .container {
+      width: 100vw;
+      flex-direction: column-reverse;
+      align-items: center;
+      .text, .image {
+        width: 95vw;
+      }
+    }
+
+  }
+}
