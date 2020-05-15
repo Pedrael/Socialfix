@@ -1,0 +1,83 @@
+.video {
+  margin-top: RelativeUnits(270, 1, desktop-middle, horizontal);
+  .title {
+    @include SetWidth-responsive(1330);
+    z-index: 2;
+    position: relative;
+    h2 {
+      background: -webkit-linear-gradient(-66deg, #DFEEFF 1%, #FFD5C8 99%);//overrides in other files
+      -webkit-background-clip: text;
+      -webkit-text-stroke: RelativeUnits(6, 0.5, desktop-middle, horizontal) transparent;
+      color: black;
+      margin-bottom: RelativeUnits(-80, 0.9, desktop-middle, horizontal);
+    }
+  }
+  .container {
+    @include SetWidth-responsive(1330);
+    .img-wrap {
+      margin-bottom: RelativeUnits(60, 0.8, desktop-middle, horizontal);
+    }
+    .text-wrap {
+      h4 {
+        color: rgba(201, 201, 201, 1);
+        @include SetFontLineSize(0.25, 0.25, 0.5, 44, 24);
+      }
+    }
+    .videos-array {
+      margin-top: RelativeUnits(200, 1.0, desktop-middle, horizontal);
+
+      .video-duplet {
+        width: 30%;
+        .video-item {
+          margin-bottom: RelativeUnits(60, 0.0, desktop-middle, horizontal);
+          p {
+            font-size: 14px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+  @include _tablet-middle {
+    .title {
+      width: 100vw;
+      h2 {
+        margin-left: 20px;
+        margin-bottom: RelativeUnits(30, 0.0, desktop-middle, horizontal);
+      }
+    }
+    .container {
+      width: 100vw;
+      .text-wrap {
+        width: 90vw;
+        margin: 0 auto;
+        h4 {
+          background: -webkit-linear-gradient(-90deg, #ffffff 0%, #373737 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      .videos-array {
+        flex-wrap: wrap;
+        // // TODO:
+        .video-duplet {
+          width: 90vw;
+          margin: 0 auto;
+          .video-item {
+            p { margin-top: 20px; }
+          }
+        }
+      }
+    }
+  }
+  @include _phone-big {
+    .container {
+      .text-wrap {
+        h4 {
+          font-size: 14px;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+}

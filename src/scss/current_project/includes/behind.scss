@@ -1,0 +1,57 @@
+.behind {
+  .title {
+    @include SetWidth-responsive(1300);
+    margin-top: RelativeUnits(170, 1, desktop-middle, horizontal);
+    margin-bottom: RelativeUnits(150, 1, desktop-middle, horizontal);
+    h2 {
+      background: -webkit-linear-gradient(-66deg, #FF774B 1%, #F27AA5 99%);//overrides in other files
+      -webkit-background-clip: text;
+      -webkit-text-stroke: RelativeUnits(6, 0.5, desktop-middle, horizontal) transparent;
+      color: black;
+    }
+  }
+  .container {
+    margin-bottom: RelativeUnits(60, 0.5, desktop-middle, horizontal);
+    width: 100vw;
+    .current {
+      @include SetWidth-responsive(1015);
+    }
+    .prev, .next {
+      @include SetWidth-responsive(415);
+      max-height: RelativeUnits(450, 1, desktop-middle, horizontal);
+      overflow: hidden;
+      h4 { display: none; }
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+  }
+  @include _tablet-middle {
+    .title {
+      width: 100vw;
+      h2 {
+        margin-left: 20px;
+      }
+    }
+    .container {
+      .current, .prev, .next {
+        h4 { display: none; }
+      }
+    }
+  }
+  @include _phone-big {
+    .container {
+
+      .current {
+        width: 225px;
+      }
+      .prev {
+        margin-left: -30px;
+      }
+      .next {
+        margin-right: -30px;
+      }
+    }
+  }
+}

@@ -35,7 +35,7 @@
   h2 {
     background: -webkit-linear-gradient(-66deg, #DF3C31 1%, #864DFF 99%);//overrides in other files
     -webkit-background-clip: text;
-    -webkit-text-stroke: 4px transparent;
+    -webkit-text-stroke: RelativeUnits(6, 0.5, desktop-middle, horizontal) transparent;
     color: black;
     align-self: flex-start;
     margin-bottom: RelativeUnits(350, 0.9, desktop-middle, horizontal);
