@@ -91,6 +91,10 @@
   .container {
     @include SetWidth-responsive(1450);
 
+    .owl-carousel {
+      display: none;
+    }
+
     h2 {
       background: -webkit-linear-gradient(-86deg, #8FDEB8 5%, #35A1C2 91%);
       -webkit-background-clip: text;
@@ -98,7 +102,7 @@
       color: black;
       margin-top: RelativeUnits(-60, 0.9, desktop-middle, horizontal);
     }
-    #teaser-slider {
+    #teaser-dots {
       display: none;
       margin-bottom: 50px;
     }
@@ -179,14 +183,25 @@
         margin-top: RelativeUnits(40, 0.0, desktop-middle, horizontal);
         margin-left: 18px;
       }
+      .owl-carousel {
+        display: flex;
+      }
+      .desktop {
+        display: none;
+      }
       .services, .tags {
         flex-wrap: nowrap;
-        width: 200%;
+        width: 100%;
         margin-left: 18px;
+        .service { width: 80vw; }
       }
       .tags {
+        .tag-duplet {
+          margin: RelativeUnits(20, 0.5, desktop-middle, horizontal);
+        }
         .tag {
           min-width: 190px;
+          min-height: 160px;
           h4 {
             font-size: 18px;
             span { font-size: 36px; }
@@ -194,7 +209,7 @@
           p { font-size: 14px; }
         }
       }
-      #teaser-slider { display: flex; }
+      #teaser-dots { display: flex; }
     }
   }
 }

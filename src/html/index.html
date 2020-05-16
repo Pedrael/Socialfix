@@ -68,13 +68,13 @@
     <section id="subteaser" class="subteaser flex a-i-center f-d-column">
       <div class="container">
         <h2>we did</h2>
-        <div class="services flex j-c-s-between">
-          <div class="service" id="s-slide1">
+        <div class="services flex j-c-s-between desktop">
+          <div class="service">
             <h3>Social media</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
           </div>
 
-          <div class="service" id="s-slide2">
+          <div class="service">
             <h3>Video &</h3>
             <h3>Photoshoot</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
@@ -82,12 +82,26 @@
 
         </div>
 
-        <div class="slider-buttons" id="teaser-slider">
-          <div class="s-button selected"></div>
+        <div class="services flex j-c-s-between owl-carousel" id="teaser-carousel">
+          <div class="service">
+            <h3>Social media</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+          </div>
+
+          <div class="service">
+            <h3>Video &</h3>
+            <h3>Photoshoot</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+          </div>
+
+        </div>
+
+        <div class="slider-buttons" id="teaser-dots">
+          <div class="s-button active"></div>
           <div class="s-button"></div>
         </div>
 
-        <div class="tags flex" id="tags">
+        <div class="tags flex desktop" id="tags">
           <div class="tag" id="t-slide1">
             <h4 id="color1"><span id="color1">3</span> days</h4>
             <p>3 days of event coverage</p>
@@ -105,6 +119,30 @@
             <p>6 timelapse videos</p>
           </div>
         </div>
+
+        <div class="tags flex owl-carousel" id="tags-carousel">
+          <!-- <div class="flex tag-duplet"> -->
+            <div class="tag" id="t-slide1">
+              <h4 id="color1"><span id="color1">3</span> days</h4>
+              <p>3 days of event coverage</p>
+            </div>
+            <div class="tag">
+              <h4 id="color2"><span id="color2">100</span> +</h4>
+              <p>100+ interviews</p>
+            </div>
+          <!-- </div>
+          <div class="flex tag-duplet"> -->
+            <div class="tag">
+              <h4 id="color3"><span id="color3">40</span> h</h4>
+              <p>Over 40 hours of footage</p>
+            </div>
+            <div class="tag">
+              <h4 id="color4"><span id="color4">6</span> videos</h4>
+              <p>6 timelapse videos</p>
+            </div>
+          <!-- </div> -->
+        </div>
+
       </div>
     </section>
 
@@ -162,9 +200,8 @@
     <section id="photos" class="photos flex f-d-column a-i-center">
       <div class="container">
         <h2>photos</h2>
-        <div class="photo-slider">
-          <ul>
-            <li class="photo-item flex wrap j-c-s-between">
+        <div class="photo-slider owl-carousel" id="photos-carousel">
+            <div class="photo-item flex wrap j-c-s-between" id="p1">
               <div class="photo-wrap w60">
                 <img src="img/1.png" alt="">
               </div>
@@ -180,13 +217,30 @@
               <div class="photo-wrap w100">
                 <img src="img/5.png" alt="">
               </div>
-            </li>
-          </ul>
+            </div>
+
+            <div class="photo-item flex wrap j-c-s-between" id="p2">
+              <div class="photo-wrap w60">
+                <img src="img/1.png" alt="">
+              </div>
+              <div class="photo-wrap w39">
+                <img src="img/2.png" alt="">
+              </div>
+              <div class="photo-wrap w39">
+                <img src="img/3.png" alt="">
+              </div>
+              <div class="photo-wrap w60">
+                <img src="img/4.png" alt="">
+              </div>
+              <div class="photo-wrap w100">
+                <img src="img/5.png" alt="">
+              </div>
+            </div>
         </div>
       </div>
-      <div class="slider-buttons" id="photos-slider">
-        <div class="s-button selected"></div>
-        <div class="s-button"></div>
+      <div class="slider-buttons" id="photos-dots">
+        <div class="s-button p1 active" data="0"></div>
+        <div class="s-button p2 " data="1"></div>
       </div>
     </section>
 
@@ -194,29 +248,30 @@
       <div class="title">
         <h2>behind the<br>scenes</h2>
       </div>
-      <div class="container flex j-c-s-between a-i-center">
-        <div class="prev">
+      <div class="container flex j-c-s-between a-i-center owl-carousel" id="behind-carousel">
+        <div class="item" id="b1">
           <div class="i-wrap">
-            <img src="img/l1.png" alt="">
+            <img src="img/b1.jpg" alt="">
           </div>
           <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h4>
         </div>
-        <div class="current">
+        <div class="item" id="b2">
           <div class="i-wrap">
-            <img src="img/l2.png" alt="">
+            <img src="img/b2.jpg" alt="">
           </div>
           <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h4>
         </div>
-        <div class="next">
+        <div class="item" id="b3">
           <div class="i-wrap">
-            <img src="img/l3.png" alt="">
+            <img src="img/b3.jpg" alt="">
           </div>
           <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h4>
         </div>
       </div>
-      <div class="slider-buttons" id="behind-slider">
-        <div class="s-button selected"></div>
-        <div class="s-button"></div>
+      <div class="slider-buttons" id="behind-dots">
+        <div class="s-button b1 active" data="0"></div>
+        <div class="s-button b2" data="1"></div>
+        <div class="s-button b3" data="2"></div>
       </div>
     </section>
 
@@ -231,7 +286,8 @@
         <div class="text-wrap">
           <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h4>
         </div>
-        <div class="videos-array flex j-c-s-between">
+
+        <div class="videos-array flex j-c-s-between videos-desktop">
           <div class="video-duplet">
             <div class="video-item">
               <div class="video-wrap">
@@ -279,9 +335,58 @@
 
         </div>
 
-        <div class="slider-buttons" id="videos-slider">
-          <div class="s-button selected"></div>
-          <div class="s-button"></div>
+        <div class="videos-array flex j-c-s-between owl-carousel" id="videos-carousel">
+          <div class="video-duplet" id="v1">
+            <div class="video-item">
+              <div class="video-wrap">
+                <img src="img/vv.png" alt="">
+              </div>
+              <p>Dr. Link Intorduction</p>
+            </div>
+            <div class="video-item">
+              <div class="video-wrap">
+                <img src="img/vv.png" alt="">
+              </div>
+              <p>Dr. Link Intorduction</p>
+            </div>
+          </div>
+
+          <div class="video-duplet" id="v2">
+            <div class="video-item">
+              <div class="video-wrap">
+                <img src="img/vv.png" alt="">
+              </div>
+              <p>Dr. Link Intorduction</p>
+            </div>
+            <div class="video-item">
+              <div class="video-wrap">
+                <img src="img/vv.png" alt="">
+              </div>
+              <p>Dr. Link Intorduction</p>
+            </div>
+          </div>
+
+          <div class="video-duplet" id="v3">
+            <div class="video-item">
+              <div class="video-wrap">
+                <img src="img/vv.png" alt="">
+              </div>
+              <p>Dr. Link Intorduction</p>
+            </div>
+            <div class="video-item">
+              <div class="video-wrap">
+                <img src="img/vv.png" alt="">
+              </div>
+              <p>Dr. Link Intorduction</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="slider-buttons" id="videos-dots">
+          <div class="s-button v1 active"></div>
+          <div class="s-button v2"></div>
+          <div class="s-button v3"></div>
         </div>
 
       </div>
