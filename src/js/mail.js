@@ -1,5 +1,3 @@
-import jQuery from 'jquery';
-
 export default function Mail() {
 	jQuery(".submit-message").hide();
 	jQuery(document).ready(function() {
@@ -12,7 +10,7 @@ export default function Mail() {
 			jQuery.ajax({
 				type: "POST",
 				url: "/mail.php",
-				contentType: "application/json; charset=utf-8", 
+				contentType: "application/json; charset=utf-8",
 				data: th.serialize()
 			}).done(function() {
 				jQuery(".submit-message").show();

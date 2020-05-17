@@ -1,17 +1,12 @@
-import jQuery from 'jquery';
-import $ from 'jquery';
-import Header from './header.js';
-import Carousel from './carousel.js';
-import TeaserCarousel from './carousel-teaser.js';
+
 import Mail from './mail.js';
+import Head from './head.js';
 
 //import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
 
-Header();
-Carousel();
-TeaserCarousel();
 Mail();
+Head();
 
 $(document).ready(function(){
   $('#photos-carousel').owlCarousel({
