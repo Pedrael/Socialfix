@@ -8,6 +8,10 @@
       height: auto;
       //background: red;
     }
+    .wistia_embed {
+      @include SetWidth-responsive(1200);
+      height: RelativeUnits(676, 1, desktop-middle, horizontal);
+    }
   }
 
   .text-container {
@@ -57,6 +61,7 @@
   }
 
   @include _phone-big {
+
     flex-direction: column;
     .text-container, .video-container {
       width: 100vw;
@@ -83,6 +88,10 @@
       border-radius: 20px;
       max-height: calc(100vw * 9 / 16);
       margin-top: 0;
+      .wistia_embed {
+        width: 100vw;
+        height: 56vw;
+      }
     }
   }
 }

@@ -33,6 +33,12 @@
         width: 30%;
         .video-item {
           margin-bottom: RelativeUnits(60, 0.0, desktop-middle, horizontal);
+          .video-wrap {
+            .wistia_embed {
+              @include SetWidth-responsive(399);
+              height: RelativeUnits(223, 1.0, desktop-middle, horizontal);
+            }
+          }
           p {
             font-size: 14px;
             font-weight: 600;
@@ -73,6 +79,12 @@
           margin: 0 auto;
           .video-item {
             p { margin-top: 20px; }
+            .video-wrap {
+              .wistia_embed {
+                width: 90vw;
+                height: 50vw;
+              }
+            }
           }
         }
       }
