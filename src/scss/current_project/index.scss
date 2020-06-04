@@ -7,6 +7,9 @@ $mont: 'Montserrat', sans-serif;
 * {
 	z-index: 1;
 }
+body {
+	overflow-x: hidden;
+}
 html {
 	    font-family: $mont;
 			overflow-x: hidden;
@@ -80,5 +83,5 @@ html {
 @import "includes/videos.scss";
 ///HEADER, FOOTER, SPARE FOR ALL
 @import "includes/base.scss";
-@import "includes/head.scss";
-@import "includes/foot-new.scss";
+//@import "includes/head.scss";
+//@import "includes/foot-new.scss";
