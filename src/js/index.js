@@ -1,12 +1,12 @@
 
-import Mail from './mail.js';
-import Head from './head.js';
+//import Mail from './mail.js';
+//import Head from './head.js';
 
 //import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
 
-Mail();
-Head();
+//Mail();
+//Head();
 
 $(document).ready(function(){
   $('#photos-carousel').owlCarousel({
