@@ -31,9 +31,12 @@ html {
       h2, h3, h4 {
         font-weight: 500;
       }
-      p, h2, h3, h4, li, a  {
+      p, h2, h4, li, a  {
         color: white;
       }
+			h3:not(.tit) {
+				color: white;
+			}
       p, li, a, input, textarea {
         @include SetFontLineSize(0.1, 0.1, 0.8, 14, 10);
       }
@@ -58,6 +61,8 @@ html {
         @include SetFontLineSize(0.25, 0.25, 0.5, 24, 12);
       }
 }
+
+.about{ .logo { img{ width: auto; }}}
 
 .slider-buttons {
 	display: flex;

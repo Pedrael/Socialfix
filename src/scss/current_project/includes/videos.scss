@@ -9,7 +9,19 @@
       -webkit-background-clip: text;
       -webkit-text-stroke: RelativeUnits(6, 0.5, desktop-middle, horizontal) transparent;
       color: black;
-      margin-bottom: RelativeUnits(-80, 0.9, desktop-middle, horizontal);
+      //margin-bottom: RelativeUnits(-80, 0.9, desktop-middle, horizontal);
+    }
+  }
+  iframe {
+    margin-top: RelativeUnits(95, 1, desktop-middle, horizontal);
+    @include SetWidth-responsive(1300, 0.95);
+    height: RelativeUnits(757, 0.95, desktop-middle, horizontal);
+    -webkit-box-shadow: 0px 50px 38px -30px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 50px 38px -30px rgba(0,0,0,0.45);
+    box-shadow: 0px 50px 38px -30px rgba(0,0,0,0.45);
+    @include _phone-big {
+      box-shadow: none !important;
+      margin-top: 50px
     }
   }
   .container {
