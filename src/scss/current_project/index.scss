@@ -37,6 +37,12 @@ html {
 			h3:not(.tit) {
 				color: white;
 			}
+			.tab-nav, .part-add {
+				a {
+					font-size: 18px !important;
+					line-height: 22px !important;
+				}
+			}
       p, li, a, input, textarea {
         @include SetFontLineSize(0.1, 0.1, 0.8, 14, 10);
       }
@@ -63,6 +69,7 @@ html {
 }
 
 .about{ .logo { img{ width: auto; }}}
+.nav{ .logo { img{ width: auto; }}}
 
 .slider-buttons {
 	display: flex;
